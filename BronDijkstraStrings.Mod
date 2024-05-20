@@ -341,4 +341,6 @@ MODULE BronDijkstraStrings;  (* hk  2 Feb 2024 *)
   RETURN ORD(c1) - ORD(c2)
   END Compare;
 
+  (* UNDER CONSTRUCTION *)
+
 END BronDijkstraStrings.
