@@ -4,7 +4,7 @@ MODULE BronDijkstraStrings;  (* hk  2 Feb 2024 *)
   A Better Way to Combine Efficient String Length Encoding and Zero-termination.
   SIGPLAN Notices 1988, Vol. 24, No. 6, p. 11-19.
   
-  In the following lwb(s) and upb(s) stand for the lower, c.q. upper bound 
+  In the following lwb(s) and upb(s) stand for the lower and upper bound 
   of the index range of the character array containing the string.
   
   In Oberon:  lwb(s) = 0;             (* lower bound of string container *)
@@ -50,7 +50,7 @@ MODULE BronDijkstraStrings;  (* hk  2 Feb 2024 *)
   RETURN i
   END MIN;
   
-(*
+
   PROCEDURE Length* (VAR s: ARRAY OF CHAR): INTEGER;                (* Originally: eos *)
   (* For Oberon-07, where it is guaranteed that: 
      - all strings are zero-terminated
@@ -77,7 +77,7 @@ MODULE BronDijkstraStrings;  (* hk  2 Feb 2024 *)
     END
   RETURN res
   END Length;
-*)
+(*
   PROCEDURE Length* (s: ARRAY OF CHAR): INTEGER;                (* Originally: eos *)
   (* For implementations where it is not guaranteed that: 
      - all strings are zero-terminated
@@ -107,7 +107,7 @@ MODULE BronDijkstraStrings;  (* hk  2 Feb 2024 *)
     END
   RETURN res
   END Length;
-
+*)
  
   PROCEDURE SetLength (VAR s: ARRAY OF CHAR; e: INTEGER);     (* Originally: terminate *)
   (*
@@ -152,7 +152,7 @@ MODULE BronDijkstraStrings;  (* hk  2 Feb 2024 *)
   (*
     Adapts a string (null-terminated or not) to the Bron-Dijkstra length convention.
     Finds the null-character or the end-of-string by a left-to-right scan and encodes 
-    its length. == Tested ==
+    its length.
   *)
     VAR i: INTEGER;
   BEGIN i := 0;
